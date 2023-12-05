@@ -71,15 +71,14 @@ class ProfCoursTest extends TestCase
             *
             */
             
-            New Prof("Nom_prof1", "Prenom_prof1", "10/01/1982", "lieu_prof1"),      // idprof = 1
-            new Prof("Nom_prof2", "Prenom_prof2", "10/02/1982", "lieu_prof2"),      // idprof = 2
-            new Prof("Nom_prof3", "Prenom_prof3", "10/03/1982", "lieu_prof3"),      // idprof = 3
+            
             new Prof("Nom_prof4", "Prenom_prof4", "10/04/1982", "lieu_prof4"),      // idprof = 4
             new Prof("Nom_prof5", "Prenom_prof5", "10/05/1982", "lieu_prof5"),      // idprof = 5
             new Prof("Nom_prof6", "Prenom_prof6", "10/06/1982", "lieu_prof6"),      // idprof = 6
             new Prof("Nom_prof7", "Prenom_prof7", "10/07/1982", "lieu_prof7"),      // idprof = 7
+            new Prof("Nom_prof8", "Prenom_prof8", "10/08/1982", "lieu_prof8"),      // idprof = 8       ** A SUPPRIMER **
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 9
-            new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11")    // idprof = 11 
+            new Prof("Nom_prof10", "Prenom_prof10", "10/10/1982", "lieu_prof10")    // idprof = 10      ** A MODIFIER **
         ];
 
         self::$cours_a = [
@@ -268,29 +267,6 @@ class ProfCoursTest extends TestCase
         * s’inspirer de test de sélection et affichage du premier prof pour tester la sélection et l’affichage du premier cours dans la base.
         *
         */
-        
-           
-
-        // Avec des ID
-        $idProf = 10;
-        $idCours = 9;
-        // Prof
-        $prof = Prof::printOne($conn, $idProf);
-        $prof_str = $prof->__toString();
-        print "########## - ${idProf}e PROF EN BASE - ########## \n";
-        print $prof_str."\n";
-        print "################################################################\n\n";
-        $expected = self::$prof_a[$idProf-1]->__toString();
-        $this->assertEquals($expected, $prof_str, "Prof \n");
-
-        // Cours
-        $cours = Cours::printOne($conn, $idCours);
-        $cours_str = $cours->__toString();
-        print "@@@@@@@@@@@@@ - ${idCours}e COURS EN BASE - @@@@@@@@@@@@@ \n";
-        print $cours_str."\n";
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n";
-        $expected = self::$cours_a[$idCours-1]->__toString();
-        $this->assertEquals($expected, $cours_str, "Cours \n");
 
     }
     
