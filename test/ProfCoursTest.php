@@ -79,7 +79,7 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof6", "Prenom_prof6", "10/06/1982", "lieu_prof6"),      // idprof = 6
             new Prof("Nom_prof7", "Prenom_prof7", "10/07/1982", "lieu_prof7"),      // idprof = 7
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 8
-            new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11")    // idprof = 9
+            new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11"),    // idprof = 9
             new Prof("Nom_prof12", "Prenom_prof12", "10/12/1982", "lieu_prof12")    // idprof = 10
         ];
 
