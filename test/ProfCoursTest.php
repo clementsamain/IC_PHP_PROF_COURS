@@ -381,9 +381,12 @@ class ProfCoursTest extends TestCase
 
         // Cours
         $cours = new Cours($this->intitule, $this->duree, 10);
+        print $cours;
         $val = $cours->updateOne($conn);
         $expected_cours_str= $cours->__toString();
+        print $expected_cours_str;
         $record_cours = Cours::printOne($conn);
+        print $record_cours;
         $this->assertEquals($expected_cours_str, $record_cours->__toString(), "Update du 1e cours  ...\n");
         $this->assertTrue($val, "Update du 1e cours ...\n");
 
