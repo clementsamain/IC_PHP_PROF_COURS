@@ -80,6 +80,7 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof7", "Prenom_prof7", "10/07/1982", "lieu_prof7"),      // idprof = 7
             new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 8
             new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11")    // idprof = 9
+            new Prof("Nom_prof12", "Prenom_prof12", "10/12/1982", "lieu_prof12")    // idprof = 10
         ];
 
         self::$cours_a = [
@@ -381,12 +382,9 @@ class ProfCoursTest extends TestCase
 
         // Cours
         $cours = new Cours($this->intitule, $this->duree, 10);
-        print $cours;
         $val = $cours->updateOne($conn);
         $expected_cours_str= $cours->__toString();
-        print $expected_cours_str;
         $record_cours = Cours::printOne($conn);
-        print $record_cours;
         $this->assertEquals($expected_cours_str, $record_cours->__toString(), "Update du 1e cours  ...\n");
         $this->assertTrue($val, "Update du 1e cours ...\n");
 
