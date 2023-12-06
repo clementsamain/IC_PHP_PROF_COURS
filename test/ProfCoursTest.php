@@ -26,7 +26,7 @@ class ProfCoursTest extends TestCase
     private $lieu ="Toulouse, France"; // a changer
 
     // cours
-    private $intitule="Intégratoin continue"; //a remplir
+    private $intitule="Intégration continue"; //a remplir
     private $duree="3h";    //a remplir
 
     private static $prof_a = [];
@@ -78,8 +78,8 @@ class ProfCoursTest extends TestCase
             new Prof("Nom_prof5", "Prenom_prof5", "10/05/1982", "lieu_prof5"),      // idprof = 5
             new Prof("Nom_prof6", "Prenom_prof6", "10/06/1982", "lieu_prof6"),      // idprof = 6
             new Prof("Nom_prof7", "Prenom_prof7", "10/07/1982", "lieu_prof7"),      // idprof = 7
-            new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 9
-            new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11")    // idprof = 11 
+            new Prof("Nom_prof9", "Prenom_prof9", "10/09/1982", "lieu_prof9"),      // idprof = 8
+            new Prof("Nom_prof11", "Prenom_prof11", "10/11/1982", "lieu_prof11")    // idprof = 9
         ];
 
         self::$cours_a = [
@@ -286,8 +286,8 @@ class ProfCoursTest extends TestCase
            
 
         // Avec des ID
-        $idProf = 10;
-        $idCours = 9;
+        $idProf = 9;
+        $idCours = 11;
         // Prof
         $prof = Prof::printOne($conn, $idProf);
         $prof_str = $prof->__toString();
@@ -321,8 +321,8 @@ class ProfCoursTest extends TestCase
         $conn = $this->getConnection();
 
         // Avec Id en dur.
-        $idProf = 10;
-        $idCours = 9;
+        $idProf = 9;
+        $idCours = 10;
 
         // Prof
         $prof = new Prof($this->nom, $this->prenom, $this->date, $this->lieu);
